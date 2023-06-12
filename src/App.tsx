@@ -37,7 +37,7 @@ const CardComponent: React.FC = () => {
         <div
           className="card-cover"
           style={{
-            backgroundImage: "url('https://i.ibb.co/f8PL8vh/Firefly-Busy-amusement-park-on-Mars-30580.webp')",
+            backgroundImage: "url('https://i.ibb.co/dkbYnfV/fireflu.jpg')",
           }}
         ></div>
         <img
@@ -232,7 +232,7 @@ const CardComponent: React.FC = () => {
 
         <div className="card-section" id="contact">
           <div className="card-content">
-            <div className="card-subtitle">CONTATO</div>
+            <div className="card-subtitle">CONTATOS</div>
             <div className="card-contact-wrapper">
               <div className="card-contact">
                 <svg
@@ -247,7 +247,7 @@ const CardComponent: React.FC = () => {
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
-                Recife, Pernambuco. Brasil, 51280-030
+                Recife, Pernambuco. Brasil, 51280-030.
               </div>
               <div className="card-contact">
                 <svg
@@ -290,7 +290,7 @@ const CardComponent: React.FC = () => {
                 href="https://api.whatsapp.com/send?phone=5581996122536&text=Vamos%20trabalhar%20juntos?"
                 target="_blanck"
               >
-                <button className="contact-me">TRABALHAR JUNTOS</button>
+                <button className="contact-me">VAMOS TRABALHAR JUNTOS!?</button>
               </a>
             </div>
           </div>
