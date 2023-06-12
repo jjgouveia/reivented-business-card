@@ -14,6 +14,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
+  justify-content: center;
+  align-items: center;
 }
 .card {
   max-width: 340px;
@@ -239,6 +241,9 @@ body {
 .card-timeline {
   margin-top: 30px;
   position: relative;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  height: 350px;
 }
 .card-timeline:after {
   background: linear-gradient(to top, rgba(134, 214, 243, 0) 0%, #516acc 100%);
