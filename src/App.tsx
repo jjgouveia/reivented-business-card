@@ -2,10 +2,10 @@ import React, { useEffect, useRef } from "react";
 import "./App.css";
 
 const CardComponent: React.FC = () => {
-  // const [loading, setLoading] = React.useState(true);
   const buttonsRef = useRef<NodeListOf<HTMLButtonElement> | null>(null);
   const sectionsRef = useRef<NodeListOf<HTMLElement> | null>(null);
   const cardRef = useRef<HTMLDivElement | null>(null);
+  const year = new Date().getFullYear();
 
   const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const card = cardRef.current;
@@ -32,22 +32,29 @@ const CardComponent: React.FC = () => {
   }, []);
 
   return (
-    <div ref={cardRef} className="card" data-state="#about">
+    <><div ref={cardRef} className="card" data-state="#about">
       <div className="card-header">
         <div
           className="card-cover"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')",
+            backgroundImage: "url('https://i.ibb.co/f8PL8vh/Firefly-Busy-amusement-park-on-Mars-30580.webp')",
           }}
         ></div>
         <img
           className="card-avatar"
           src="https://scontent.frec20-1.fna.fbcdn.net/v/t39.30808-6/293613135_5473623919326070_6326872393041188425_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=HeN7EOxCr5cAX_VBvJu&_nc_ht=scontent.frec20-1.fna&oh=00_AfAQFqSkyaDS8HkzWlDC4LuS5ZST1wQqWTRNSs0bIJ9qFg&oe=648B7AE5"
-          alt="avatar"
-        />
-        <h1 className="card-fullname">Jr Gouveia</h1>
-        <h2 className="card-jobtitle">Desenvolvedor Full Stack</h2>
+          alt="avatar" />
+        <h1 className="card-fullname">
+          Jr Gouveia{" "}
+          <a
+            href="https://juniorgouveia.me/"
+            title="Portifólio"
+            target="_blank"
+          >
+            🌎
+          </a>
+        </h1>
+        <h2 className="card-jobtitle">Desenvolvedor Web Full-Stack</h2>
       </div>
       <div className="card-main">
         <div className="card-section is-active" id="about">
@@ -95,21 +102,43 @@ const CardComponent: React.FC = () => {
               </svg>
             </a>
             <a
+              href="https://juniorgouveia.me/"
+              title="Portifólio"
+              target="_blank"
+            >
+              <svg
+                fill="#d6dde9"
+                height="420px"
+                width="420px"
+                version="1.1"
+                id="Icons"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                stroke="#d6dde9"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  {" "}
+                  <g>
+                    {" "}
+                    <path d="M26,9h-2.6c-1.2-3-4.1-5-7.4-5c-3.3,0-6.2,2-7.4,5H6c-1.7,0-3,1.3-3,3v0.6C3,16.1,5.9,19,9.4,19h13.3 c3.5,0,6.4-2.9,6.4-6.4V12C29,10.3,27.7,9,26,9z M16,6c2.2,0,4.1,1.2,5.2,3H10.8C11.9,7.2,13.8,6,16,6z"></path>{" "}
+                    <path d="M23,21C23,21,23,21,23,21l0,2c0,0.6-0.4,1-1,1s-1-0.4-1-1v-2H11v2c0,0.6-0.4,1-1,1s-1-0.4-1-1v-2c0,0,0,0,0,0 c-2.4-0.1-4.5-1.2-6-2.9V25c0,1.7,1.3,3,3,3h20c1.7,0,3-1.3,3-3v-6.9C27.5,19.8,25.4,20.9,23,21z"></path>{" "}
+                  </g>{" "}
+                </g>
+              </svg>
+            </a>
+            <a
               href="https://www.facebook.com/junior.gouveia/"
               target="_blanck"
               title="Facebook"
             >
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z" />
-              </svg>
-            </a>
-            <a
-              href="https://twitter.com/outrogouveia"
-              target="_blanck"
-              title="Twitter"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" />
               </svg>
             </a>
             <a
@@ -162,7 +191,7 @@ const CardComponent: React.FC = () => {
 
         <div className="card-section" id="experience">
           <div className="card-content">
-            <div className="card-subtitle">WORK EXPERIENCE</div>
+            <div className="card-subtitle">EXPERIÊNCIAS</div>
             <div className="card-timeline">
               <div className="card-item" data-year="Atual">
                 <div className="card-item-title">
@@ -218,7 +247,7 @@ const CardComponent: React.FC = () => {
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
-                Algonquin Rd, Three Oaks Vintage, MI, 49128
+                Recife, Pernambuco. Brasil, 51280-030
               </div>
               <div className="card-contact">
                 <svg
@@ -232,7 +261,13 @@ const CardComponent: React.FC = () => {
                 >
                   <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
                 </svg>
-                (825) 288-2717
+                <a
+                  href="https://api.whatsapp.com/send?phone=5581996122536&text=Vamos%20trabalhar%20juntos?"
+                  title="WhatsApp"
+                  target="_black"
+                >
+                  (81) 99612-2536
+                </a>
               </div>
               <div className="card-contact">
                 <svg
@@ -247,9 +282,16 @@ const CardComponent: React.FC = () => {
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                   <path d="M22 6l-10 7L2 6" />
                 </svg>
-                casperwdc@gmail.com
+                <a href="mailto:gouvik.dev@gmail.com?subject=Tenho uma proposta!">
+                  gouvik.dev@gmail.com
+                </a>
               </div>
-              <button className="contact-me">TRABALHAR JUNTOS</button>
+              <a
+                href="https://api.whatsapp.com/send?phone=5581996122536&text=Vamos%20trabalhar%20juntos?"
+                target="_blanck"
+              >
+                <button className="contact-me">TRABALHAR JUNTOS</button>
+              </a>
             </div>
           </div>
         </div>
@@ -279,7 +321,20 @@ const CardComponent: React.FC = () => {
           </button>
         </div>
       </div>
-    </div>
+    </div><footer>
+        <div className="footer-content">
+          <div className="footer-item">
+            <a
+              href="https://juniorgouveia.me/"
+              title="Portifólio"
+              target="_blank"
+            >
+              Jr Gouveia{" "}
+            </a>{" "}
+            ©{` ${year}`} - Todos os direitos reservados.
+          </div>
+        </div>
+      </footer></>
   );
 };
 

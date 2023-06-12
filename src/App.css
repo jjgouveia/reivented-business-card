@@ -5,7 +5,7 @@
 body {
   color: #2b2c48;
   font-family: "Jost", sans-serif;
-  background-image: url(https://images.unsplash.com/photo-1525935944571-4e99237764c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80);
+  background-image: url(https://i.ibb.co/f8PL8vh/Firefly-Busy-amusement-park-on-Mars-30580.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -82,6 +82,11 @@ body {
   width: 100%;
   transition: 0.3s;
 }
+
+.card-header a {
+  text-decoration: none;
+}
+
 .card-header * {
   transition: 0.3s;
 }
@@ -316,6 +321,17 @@ body {
   padding-right: 12px;
   border-right: 1px solid #dfe2ec;
 }
+
+.card-contact a:link {
+  color: #6f6f7b;
+  text-decoration: none;
+}
+
+.card-contact a:visited {
+  color: #6f6f7b;
+  text-decoration: none;
+}
+
 .contact-me {
   border: 0;
   outline: none;
@@ -335,4 +351,21 @@ body {
   font-weight: 500;
   font-family: "Jost", sans-serif;
   transition: 0.3s;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.footer-item {
+  color: #e6e6e6;
+  font-size: 0.7rem;
+}
+
+.footer-item a {
+  color: #e6e6e6;
+  text-decoration: none;
 }
